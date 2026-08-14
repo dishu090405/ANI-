@@ -1,0 +1,1 @@
+Upload index.html to your GitHub repository. Replace the photo placeholders with your screenshots/photos.
