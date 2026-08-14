@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html>
 <head>
@@ -21,8 +22,9 @@ p{font-size:19px;line-height:1.9;color:#f0dce7}
 footer{text-align:center;padding:20px;color:#ffadc9;font-size:14px}
 
 /* Popup Box Styling */
-.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.7);display:none;align-items:center;justify-content:center;z-index:100;padding:20px}
-.modal-box{background:#231021;border:1px solid #ff4d88;border-radius:25px;padding:30px;max-width:500px;width:100%;text-align:center;box-shadow:0 0 50px #ff4d8880}
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.85);display:none;align-items:center;justify-content:center;z-index:100;padding:20px}
+.modal-box{background:#231021;border:2px solid #ff4d88;border-radius:25px;padding:30px;max-width:500px;width:100%;text-align:center;box-shadow:0 0 50px #ff4d88;animation:popIn 0.4s ease}
+@keyframes popIn{from{transform:scale(0.7);opacity:0}to{transform:scale(1);opacity:1}}
 
 @media(max-width:600px){.glass{padding:22px}}
 </style>
@@ -48,7 +50,8 @@ footer{text-align:center;padding:20px;color:#ffadc9;font-size:14px}
     <div class="glass">
       <p>“This is where our little story started…” 🥹❤️</p>
       <p>It all started with a single snap of chocolate on Snapchat. You replied asking, ‘Can I get one?’ and without a second thought, I said, ‘Why not? I’ll send you one!’ That’s when you laughed and reminded me that shipping chocolate to you in Jordan would cost way too much Who knew a simple piece of chocolate would spark a conversation across miles and become the sweetest start to our story?” 🥹🍫💋🙈</p>
-    late night calls still i remember and challenge mldena haha telipochi ese mljii yn aite pndu bejar ejjii kushi undu ynk er uler sikiyar pndu lucky to hve you in my life aniiii</div>
+      <p>late night calls still i remember and challenge mldena haha telipochi ese mljii yn aite pndu bejar ejjii kushi undu ynk er uler sikiyar pndu lucky to hve you in my life aniiii</p>
+    </div>
     <button class="btn" onclick="nextPage()">Next Chapter ➔</button>
   </div>
 </section>
@@ -126,8 +129,7 @@ footer{text-align:center;padding:20px;color:#ffadc9;font-size:14px}
   <div class="modal-box">
     <div style="font-size:50px">💋😘</div>
     <p style="font-size:20px; color:#ffadc9;" id="secretMessage">
-      <!-- “No matter where life takes us, I hope we keep making memories together. I want to be with you through every struggle and by your side throughout your journey to success MASTU MISS malthondu ulle ani eeruuu missing you badly love you forever fuck you nd bega baa urguu baa begaa wnn hug u tightly nd wnn kiss you mastu patergula undu much more cnt explain here 🫂💋🧿-->
-      (Your secret message here!)
+      “No matter where life takes us, I hope we keep making memories together. I want to be with you through every struggle and by your side throughout your journey to success MASTU MISS malthondu ulle ani eeruuu missing you badly love you forever fuck you nd bega baa urguu baa begaa wnn hug u tightly nd wnn kiss you mastu patergula undu much more cnt explain here 🫂💋🧿
     </p>
     <button class="btn" onclick="closeKissSecret()">Close ❤️</button>
   </div>
@@ -149,7 +151,8 @@ function nextPage() {
   currentPage++;
   if (currentPage < sections.length) {
     sections[currentPage].style.display = 'flex';
-  
+  }
+}
 
 function celebrate() {
   const emojis = ['❤️', '💖', '💋', '✨', '💕'];
