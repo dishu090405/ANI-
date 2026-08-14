@@ -26,7 +26,21 @@ When you came into my life, everything changed for good. No matter what happens,
 <section><div class="card"><div class="eyebrow">the last page</div><h2>Wish You Happy Birthday  ANiiiiiiiiiiiiiiiiii🎂💋</h2><div class="glass"><p style="font-size:23px"><b>Wishing you a very Happy Birthday, ANiiiiiiiiiiiiiii LOVE YOUUUU SOOOOOO MUCHHHHHHH BEBOOOOOOOO MICHHH YOUUUUU SOOOOO MUCHHHHHH NAIIIII MASTUUU UNDU NANALAAA PNREGUN APUJJIII OKK KELVU ONJIII WORDS PNREGUUU APUJII GOTU ANDE EHEHEH LOVE YOU NAIIIIIIIIII KELVRAA MNGA LEKA MLPUVARA HAHA avula cute cute babu leka feel happy yethu irritate mlthedala ur here for me papa er joor la uler but yenyedru contrl mlthodu epuver i know tht gotujii dada pnodu pndu but er yen life du uler pnda avu yen luck thankyouuuu sooo muchhh begaa urugu bale missing you badly jst waiting for you my love hug mlpodu kiss much more cnt say here ehehe💋</b></p><p>Stay blessed, my love
  ANIII LOVE YOU FOREVER🫂💋🧿 </p><p style="font-size:30px">I LOVE YOU SOO  MUCH ANII ❤️</p><button class="btn" onclick="celebrate()">ANI CLICK HERE🫂💋</button><div id="final" class="hidden"><p style="font-size:24px">No matter where life takes us, I hope we keep making beautiful memories together.I want to be with you through every struggle by your side throughout your journey to success🥹❤️</p></div></div></div><button class="btn" onclick="nextPage()">Next ➔</button></section>
 <footer>Made with all my love ❤️🫂💋Aniiii,</footer>
-<script>
+<script>let currentPage = 0;
+const sections = document.querySelectorAll('section');
+
+// Hide everything except the first page
+sections.forEach((sec, idx) => {
+  if (idx !== 0) sec.style.display = 'none';
+});
+
+function nextPage() {
+  sections[currentPage].style.display = 'none';
+  currentPage++;
+  if (currentPage < sections.length) {
+    sections[currentPage].style.display = 'flex';
+  }
+}
 function go(){document.getElementById('story').scrollIntoView({behavior:'smooth'});celebrate()}
 function celebrate(){for(let i=0;i<45;i++){let e=document.createElement('div');e.className='heart';e.textContent=['❤️','🫂','💋',','💋','💋','💋','💋,'💋','💋','💋','💋','💋','💋','💋','💋'.'💋','💋''][Math.floor(Math.random()*6)];e.style.left=Math.random()*100+'vw';e.style.fontSize=14+Math.random()*25+'px';e.style.animationDuration=3+Math.random()*3+'s';document.body.appendChild(e);setTimeout(()=>e.remove(),6500)}document.getElementById('final').classList.add('show')}
 </script></body></html>
